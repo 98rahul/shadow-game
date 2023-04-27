@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./index.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <div style="font-size: 24px;font-weight: 900;">GAME START</div>
+      <div class="slectGame">
+        <label style="margin:10px">select game</label>
+
+        <select style="padding:5px" name="game" id="game" onchange="selectGame()">
+          <option value="5">select Game type</option>
+          <option value="5">5 letter</option>
+          <option value="6">6 letter</option>
+          <option value="7">7 letter</option>
+          <option value="8">8 letter</option>
+        </select>
+      </div>
+
+      <div id="boxNumber" class="boxContainer">
+      </div>
+      <div class="buttons">
+        <button onclick="reset()">Reset</button>
+        <button onclick="submit()">Submit</button>
+      </div>
+    </div>
+
+    <script src="./index.js"></script>
+  </body>
+</html>
