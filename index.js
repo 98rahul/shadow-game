@@ -87,6 +87,8 @@ function validate(word, len) {
 
 var obj5 = {
   whole: "whole",
+  right:'right',
+  cites:'cites'
 };
 
 var obj6 = {
