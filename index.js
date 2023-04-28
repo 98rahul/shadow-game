@@ -104,7 +104,8 @@ var obj8 = {
 copyText.addEventListener("click", async () => {
   console.log("clicked", copyText.innerText);
   try {
-    await navigator.clipboard.writeText(copyText.innerText);
+    // await navigator.clipboard.writeText(copyText.innerText);
+    await navigator.clipboard.writeText(shadowVal.cssText);
 
     tooltip.innerHTML = `
     <p class='textCopied' id='text'>Copied Success!</p>
@@ -117,9 +118,13 @@ copyText.addEventListener("click", async () => {
     console.log("failed to copy");
   }
 });
-let xOffset=0, yOffset=0, bRadius=0, spreadVal=0,colorPick='red';
+let xOffset = 0,
+  yOffset = 0,
+  bRadius = 0,
+  spreadVal = 0,
+  colorPick = "red";
 function triggerShadow(para) {
-  console.log('para', para)
+  console.log("para", para);
   switch (para) {
     case "x": {
       xOffset = shadowListVal[0].value;
@@ -142,22 +147,25 @@ function triggerShadow(para) {
       break;
     }
   }
-  
 
-console.log('colorPick', colorPick)
+  console.log("colorPick", colorPick);
 
   boxshadow.style = `box-shadow:${xOffset}px ${yOffset}px  ${bRadius}px ${spreadVal}px ${colorPick}`;
 }
-
-
-async function  getBoxShadow  (){
-  let shadowVal = boxshadow.style
-  console.log('shadowVal', shadowVal.cssText)
-try {
-  await navigator.clipboard.writeText(shadowVal.cssText);
-  document.getElementById('shadowVal').innerText=shadowVal.cssText
-
-}catch(err){
-
+var shadowVal ;
+async function getBoxShadow() {
+   shadowVal = boxshadow.style;
+  console.log("shadowVal", shadowVal.cssText);
+  try {
+    await navigator.clipboard.writeText(shadowVal.cssText);
+    document.getElementById("shadowVal").innerText = shadowVal.cssText;
+  } catch (err) {}
 }
-}
+
+/**
+ how to check the copy to clipboard working or not
+  navigator.permissions.query({ name: "write-on-clipboard" }).then((result) => {
+  if (result.state == "granted" || result.state == "prompt") {
+    alert("Write access granted!");
+  }
+}); */

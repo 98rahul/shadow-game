@@ -15,7 +15,7 @@ body {
 }
 
 .container {
-    padding:1vh;
+    padding: 1vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -44,27 +44,28 @@ body {
     margin: 10px;
     padding: 10px;
     border: none;
-    color:#f2f2f2;
+    color: #f2f2f2;
     font-size: 20px;
     font-weight: bold;
-    border:1px solid #eee;
+    border: 1px solid #eee;
     background-color: transparent;
 
 }
 
-.buttons{
-    margin:2vh 0;
+.buttons {
+    margin: 2vh 0;
 }
 
-button{
+button {
     background-color: rebeccapurple;
-    padding:3px 5px;
+    padding: 5px 10px;
     border: none;
-    color:#eee;
+    color: #eee;
     font-size: 18px;
     font-weight: 700;
 }
-.clipboard{
+
+.clipboard {
     position: relative;
     width: 200px;
     display: flex;
@@ -72,36 +73,39 @@ button{
     cursor: pointer;
 }
 
-#tooltip{
+#tooltip {
     position: absolute;
     z-index: 2;
     /* top:0;left: 0; */
 
 }
-.textCopied{
+
+.textCopied {
     background-color: transparent;
     color: green;
     font-size: 20px;
     font-weight: 800;
-    
-    padding:2px 6px
+
+    padding: 2px 6px
 }
 
-#boxshadow{
-    height:200px;width: 200px;
+#boxshadow {
+    height: 200px;
+    width: 200px;
     background-color: #fff;
-    margin:0 2vw;
+    margin: 0 2vw;
 }
-.boxshadow-wrapper{
+
+.boxshadow-wrapper {
     display: flex;
     flex-direction: column;
     width: 70%;
-    margin:0 auto;
+    margin: 0 auto;
     /* background-color: red; */
     padding: 2vh;
 }
 
-.boxshadwChild{
+.boxshadwChild {
     display: flex;
     width: 80%;
     margin: 0 auto;
@@ -112,32 +116,52 @@ button{
     padding: 2vh;
 
 }
-.select-option{
+
+.select-option {
     display: flex;
     /* justify-content: space-between; */
-    margin:  10px;
+    margin: 10px;
     /* background-color: blue; */
-    
-}
-.select-option label{
-    margin: 0 10px;
-    flex:1.3;
-}
-.select-option input{
-    flex:2;
+
 }
 
-.generateShadow{
-    margin-top: 1vh ;
+.select-option label {
+    margin: 0 10px;
+    flex: 1.3;
+}
+
+.select-option input {
+    flex: 2;
+}
+
+.select-option img {
+    display: none;
+}
+
+input[type='color'] {
+    border: none;
+
+
+}
+
+.generateShadow {
+    margin-top: 1vh;
     display: flex;
     /* justify-content: flex-end; */
     align-items: center;
 }
-.select-option button{
+
+.select-option button {
+    font-size: 14px;
+    padding: 10 5px;
+    flex: 2;
     margin:0 10px;
 }
-.select-option span{
-    font-size: 20px;
+
+.select-option span {
+    flex: 2;
+    font-size: 10px;
     font-weight: 900;
-    color:#000
+    color: #000;
+    word-wrap: break-word;
 }
