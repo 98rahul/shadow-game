@@ -9,11 +9,16 @@
   </head>
   <body>
     <div class="container">
-      <div style="font-size: 24px;font-weight: 900;">GAME START</div>
+      <div style="font-size: 24px; font-weight: 900">GAME START</div>
       <div class="slectGame">
-        <label style="margin:10px">select game</label>
+        <label style="margin: 10px">select game</label>
 
-        <select style="padding:5px" name="game" id="game" onchange="selectGame()">
+        <select
+          style="padding: 5px"
+          name="game"
+          id="game"
+          onchange="selectGame()"
+        >
           <option value="5">select Game type</option>
           <option value="5">5 letter</option>
           <option value="6">6 letter</option>
@@ -22,11 +27,56 @@
         </select>
       </div>
 
-      <div id="boxNumber" class="boxContainer">
-      </div>
+      <div id="boxNumber" class="boxContainer"></div>
       <div class="buttons">
         <button onclick="reset()">Reset</button>
         <button onclick="submit()">Submit</button>
+      </div>
+
+      <div
+        class="clipboard"
+        style="background-color: rgb(215, 144, 144); padding: 5px"
+      >
+        <h2 id="copyMe">Copy me</h2>
+        <div id="tooltip"></div>
+      </div>
+      <div class="boxshadow-wrapper">
+        <h3 style="margin: 3vh 0">Box-Shadow</h3>
+        <div class="boxshadwChild">
+          <div id="boxshadow"></div>
+          <div class="selectVal">
+            <div class="select-option">
+              <label>x-offset:</label>
+              <input type="number" class="shadowVal" onchange="triggerShadow('x')" />
+            </div>
+            <div class="select-option">
+              <label>y-offset:</label>
+              <input type="number" class="shadowVal" 
+              onchange="triggerShadow('y')" 
+              />
+            </div>
+            <div class="select-option">
+              <label>blur-radius:</label>
+              <input type="number" class="shadowVal" 
+              onchange="triggerShadow('b')" 
+              />
+            </div>
+            <div class="select-option">
+              <label>spread-radius:</label>
+              <input type="number" class="shadowVal" onchange="triggerShadow('s')" />
+            </div>
+            <div class="select-option">
+              <label>color:</label>
+              <input type="color" class="shadowVal" onchange="triggerShadow('c')" />
+            </div>
+            <div class="select-option">
+              <button onclick="getBoxShadow()">Generate Shadow</button>
+              <span id="shadowVal">red</span>
+            </div>
+          </div>
+          
+        </div>
+       
       </div>
     </div>
 
